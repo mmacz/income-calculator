@@ -25,7 +25,7 @@ unsigned int IncomeCalculator::incomeCalc(const IncomeReport& ir) const {
 }
 
 unsigned int IncomeCalculator::taxPrePaymentCalc(const IncomeReport& ir) const {
-    return static_cast<unsigned int>((ir.income * mIncomeDescr.taxBasePercent) / 100 - TAX_REDUCE_AMOUNT());
+    return static_cast<unsigned int>((ir.income * mIncomeDescr.taxBasePercent) / 100.f - TAX_REDUCE_AMOUNT());
 }
 
 double IncomeCalculator::netSalaryCalc(const IncomeReport& ir) const {
